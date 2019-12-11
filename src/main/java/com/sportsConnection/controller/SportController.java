@@ -1,10 +1,10 @@
-package sportsConnection.controller;
+package com.sportsConnection.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import sportsConnection.entity.Sport;
-import sportsConnection.service.SportService;
+import com.sportsConnection.entity.Sport;
+import com.sportsConnection.service.SportService;
 
 import java.util.Collection;
 

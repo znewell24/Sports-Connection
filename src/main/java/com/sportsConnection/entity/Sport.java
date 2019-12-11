@@ -1,4 +1,4 @@
-package sportsConnection.entity;
+package com.sportsConnection.entity;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;

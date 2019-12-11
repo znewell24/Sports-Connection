@@ -1,8 +1,9 @@
-package sportsConnection.dao;
+package com.sportsConnection.dao;
 
-import sportsConnection.entity.Sport;
+import com.sportsConnection.entity.Sport;
 
 import java.util.Collection;
+import java.util.Map;
 
 public interface SportDao {
 
@@ -15,4 +16,7 @@ public interface SportDao {
     void updateSport(Sport sport);
 
     void insertSportToDb(Sport sport);
+
+    String db(Map<String, Object> model);
+
 }
