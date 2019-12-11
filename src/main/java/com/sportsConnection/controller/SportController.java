@@ -7,6 +7,7 @@ import com.sportsConnection.entity.Sport;
 import com.sportsConnection.service.SportService;
 
 import java.util.Collection;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/sports")
@@ -39,4 +40,7 @@ public class SportController {
     public void insertStudent(@RequestBody Sport sport) {
         sportService.insertSport(sport);
     }
+
+    @RequestMapping("/db")
+    public String db(Map<String, Object> model) { return sportService.db(model); }
 }
