@@ -16,6 +16,9 @@ public class SportController {
     @Autowired
     private SportService sportService;
 
+    @RequestMapping("/")
+    public String index() { return "index"; }
+
     @RequestMapping(method = RequestMethod.GET)
     public Collection<Sport> getAllSports() {
         return sportService.getAllSports();
