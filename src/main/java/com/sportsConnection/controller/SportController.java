@@ -3,6 +3,7 @@ package com.sportsConnection.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.sportsConnection.entity.Sport;
 import com.sportsConnection.service.SportService;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import java.util.Collection;
 import java.util.Map;
 
 @RestController
+@ComponentScan
 @RequestMapping("/sports")
 public class SportController {
 
