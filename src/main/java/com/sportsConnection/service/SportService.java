@@ -13,7 +13,6 @@ import java.util.Map;
 public class SportService {
 
     @Autowired
-    @Qualifier("postgresqlData")
     private SportDao sportDao;
 
     public Collection<Sport> getAllSports() {

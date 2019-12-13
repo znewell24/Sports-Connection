@@ -15,6 +15,8 @@
   </parent>
   <name>Sports Connection</name>
 
+  <url>http://maven.apache.org</url>
+
   <properties>
     <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -86,6 +88,16 @@
       <artifactId>lombok</artifactId>
       <version>1.18.10</version>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+
+    </dependency>
+    <dependency>
+      <groupId>commons-dbcp</groupId>
+      <artifactId>commons-dbcp</artifactId>
+      <version>1.4</version>
     </dependency>
   </dependencies>
 
