@@ -3,6 +3,7 @@ package com.sportsConnection.dao;
 import com.sportsConnection.entity.Location;
 import com.sportsConnection.entity.Player;
 import com.sportsConnection.entity.Sport;
+import lombok.extern.log4j.Log4j2;
 import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 
+@Log4j2
 public class PostgresqlSPortDaoImpl implements SportDao {
 
     @Autowired
@@ -39,6 +41,8 @@ public class PostgresqlSPortDaoImpl implements SportDao {
             }
 
         } catch (Exception e) {
+            log.error(e.getMessage());
+            log.info("failed in getAllSPorts() db connection");
 
         }
 
@@ -65,7 +69,7 @@ public class PostgresqlSPortDaoImpl implements SportDao {
             }
 
         } catch (Exception e) {
-
+            log.error(e.getMessage());
         }
 
         return sport;
@@ -81,6 +85,7 @@ public class PostgresqlSPortDaoImpl implements SportDao {
 
             prepared.executeQuery();
         } catch (Exception e) {
+            log.error(e.getMessage());
         }
     }
 
@@ -108,6 +113,7 @@ public class PostgresqlSPortDaoImpl implements SportDao {
             prepared.executeQuery();
 
         } catch (Exception e) {
+            log.error(e.getMessage());
         }
 
     }
@@ -129,6 +135,7 @@ public class PostgresqlSPortDaoImpl implements SportDao {
             prepared.executeQuery();
 
         } catch (Exception e) {
+            log.error(e.getMessage());
         }
     }
 
@@ -152,6 +159,7 @@ public class PostgresqlSPortDaoImpl implements SportDao {
             }
 
         } catch (Exception e) {
+            log.error(e.getMessage());
         }
 
         return players;
@@ -167,6 +175,7 @@ public class PostgresqlSPortDaoImpl implements SportDao {
 
             prepared.executeQuery();
         } catch (Exception e) {
+            log.error(e.getMessage());
         }
     }
 
@@ -188,6 +197,7 @@ public class PostgresqlSPortDaoImpl implements SportDao {
             prepared.executeQuery();
 
         } catch (Exception e) {
+            log.error(e.getMessage());
         }
 
     }
@@ -206,6 +216,7 @@ public class PostgresqlSPortDaoImpl implements SportDao {
             prepared.executeQuery();
 
         } catch (Exception e) {
+            log.error(e.getMessage());
         }
     }
 

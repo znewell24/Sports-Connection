@@ -9,12 +9,12 @@ import org.springframework.context.annotation.Configuration;
 public class ServiceSpringConfig {
 
     @Bean
-    public SportService sportService() {
+    public SportService SportService() {
         return new SportService();
     }
 
     @Bean
-    public PlayerService playerService() {
+    public PlayerService PlayerService() {
         return new PlayerService();
     }
 }

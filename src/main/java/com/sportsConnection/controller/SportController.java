@@ -1,9 +1,9 @@
 package com.sportsConnection.controller;
 
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.sportsConnection.entity.Sport;
 import com.sportsConnection.service.SportService;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Collection;
 import java.util.Map;
 
+@Log4j2
 @RestController
-@ComponentScan
 @RequestMapping("/sports")
 public class SportController {
 
@@ -23,6 +23,7 @@ public class SportController {
 
     @RequestMapping(method = RequestMethod.GET)
     public Collection<Sport> getAllSports() {
+        log.info("Calling getAllSports()");
         return sportService.getAllSports();
     }
 
